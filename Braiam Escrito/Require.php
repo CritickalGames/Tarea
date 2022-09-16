@@ -6,4 +6,5 @@
 
     $api = new Resultado();
     $api->getALL();
+
 ?>
