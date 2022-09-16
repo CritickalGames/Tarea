@@ -1,6 +1,5 @@
 <?php
 
-require 'conexion.php';
 
 $CI = $_POST['ci'];
 $Nombre = $_POST['nombre'];
@@ -20,7 +19,7 @@ if($Nota > 7 && $Nota < 13){
 
   $message = '';
     if (!empty($CI) && !empty($Nombre) && !empty($Apellido) && !empty($Grupo) && !empty($Nota) && !empty($Juicio)) {
-        $sql = "INSERT INTO estudiante (ci, nombre ,apellido, grupo, nota, juicio) VALUES ('$CI', '$Nombre', '$Apellido', '$Grupo', '$Nota', '$Juicio')";
+        $sql = "INSERT INTO estudiante (ci, nombre, apellido, grupo, nota, juicio) VALUES ('$CI', '$Nombre', '$Apellido', '$Grupo', '$Nota', '$Juicio')";
         $stmt = $conexion->query($sql);
         header("Location: ./../index.php");
         
